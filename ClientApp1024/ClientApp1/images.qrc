@@ -1,0 +1,23 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>aircon.png</file>
+        <file>wind.png</file>
+        <file>temp.png</file>
+        <file>tv.png</file>
+        <file>window.png</file>
+        <file>smarthome.png</file>
+        <file>temperature.png</file>
+        <file>login.png</file>
+        <file>padlock.png</file>
+        <file>exit.png</file>
+        <file>tvon.png</file>
+        <file>quit.png</file>
+        <file>user.png</file>
+        <file>celsius.png</file>
+        <file>humidity.png</file>
+        <file>aircon2.png</file>
+        <file>HyunBin.png</file>
+        <file>arrow.png</file>
+        <file>chat.png</file>
+    </qresource>
+</RCC>

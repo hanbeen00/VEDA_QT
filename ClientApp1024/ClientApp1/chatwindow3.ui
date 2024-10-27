@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ChatWindow3</class>
+ <widget class="QWidget" name="ChatWindow3">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>720</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Chat3</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(255,255,255);
+border: 1px solid black;
+border-color: rgb(0, 0, 0);
+selection-color: rgb(85, 170, 255);</string>
+  </property>
+  <widget class="QGroupBox" name="chatgroupBox">
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>70</y>
+     <width>311</width>
+     <height>391</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: rgb(231, 255, 235);
+border-color: rgb(246, 235, 255);
+border-radius: 10px;</string>
+   </property>
+   <property name="title">
+    <string/>
+   </property>
+   <widget class="QLineEdit" name="messageInput">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>350</y>
+      <width>201</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLineEdit{
+	border:2px solid rgb(116, 103, 255);
+	border-radius:5px;
+ 
+	
+	color: rgb(61, 61, 61);
+	background-color: transparent;
+	font: 9pt &quot;Sans Serif&quot;;
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="sendButton">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>350</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Quicksand Medium</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+	border: 2px solid rgb(135, 135, 135);
+	color: rgb(0, 0, 0);
+	background-color: rgb(170, 170, 255);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+    background-color: rgb(255, 251, 144);
+    color: rgb(195, 193, 255);
+}</string>
+    </property>
+    <property name="text">
+     <string>Send</string>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="messageDisplay">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>291</width>
+      <height>331</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent;
+border:2px solid rgb(181, 178, 255);
+border-radius: 7px;
+color: rgb(56, 56, 56);
+font: 10pt &quot;Quicksand&quot;;</string>
+    </property>
+    <property name="readOnly">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QLabel" name="titleLabel">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>10</y>
+     <width>441</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Quicksand Medium</family>
+     <pointsize>20</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 85, 255);
+font: 500 20pt &quot;Quicksand Medium&quot;;
+background-color:rgb(240, 240, 240);
+border-color:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Window Manage Chat</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="exitButton">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	background-color:rgba(0, 0, 0, 0);
+	border:rgba(0, 0, 0, 0);
+	border-radius: 15px;
+}
+
+QPushButton:hover {
+    background-color: rgba(255, 202, 172,0.5);
+}</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="exit">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:  rgb(255, 255, 255);
+border:none;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/exit.png&quot; width = &quot;25&quot; height=&quot;25&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QSlider" name="room1Slider">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>270</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider {
+    background-color: #e0e0e0;   /* 슬라이더 전체 배경색 */
+    border: transparent;   /* 슬라이더 테두리 */
+    border-radius: 10px;         /* 슬라이더 테두리의 둥근 정도 */
+    padding: 5px;                /* 슬라이더 내부 패딩 */
+}
+QSlider::groove:horizontal {
+    border: 1px solid rgb(255, 255, 255); /* 트랙 경계선 */
+    height: 15px;               /* 트랙의 높이 설정 */
+    background: rgb(170, 255, 255);        /* 트랙 배경색 */
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #5c5c5c;        /* 핸들의 색상 */
+    border: 1px solid #5c5c5c;
+    width: 120px;                /* 핸들의 넓이 설정 */
+	height:10 px;
+    margin: -5px 0;             /* 핸들의 마진 */
+    border-radius: 5px;         /* 핸들의 모서리 둥글게 */
+}
+
+/* 슬라이더 핸들을 클릭하고 움직일 때의 스타일 */
+QSlider::handle:horizontal:pressed {
+    background: rgb(222, 222, 222);        /* 슬라이더를 움직일 때 핸들의 색상 변화 */
+}</string>
+   </property>
+   <property name="pageStep">
+    <number>1</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="room2Slider">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>340</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider {
+    background-color: #e0e0e0;   /* 슬라이더 전체 배경색 */
+    border: transparent;   /* 슬라이더 테두리 */
+    border-radius: 10px;         /* 슬라이더 테두리의 둥근 정도 */
+    padding: 5px;                /* 슬라이더 내부 패딩 */
+}
+QSlider::groove:horizontal {
+    border: 1px solid rgb(255, 255, 255); /* 트랙 경계선 */
+    height: 15px;               /* 트랙의 높이 설정 */
+    background: rgb(218, 255, 201);
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #5c5c5c;        /* 핸들의 색상 */
+    border: 1px solid #5c5c5c;
+    width: 120px;                /* 핸들의 넓이 설정 */
+	height:10 px;
+    margin: -5px 0;             /* 핸들의 마진 */
+    border-radius: 5px;         /* 핸들의 모서리 둥글게 */
+}
+
+/* 슬라이더 핸들을 클릭하고 움직일 때의 스타일 */
+QSlider::handle:horizontal:pressed {
+    background: rgb(222, 222, 222);        /* 슬라이더를 움직일 때 핸들의 색상 변화 */
+}</string>
+   </property>
+   <property name="pageStep">
+    <number>1</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QSlider" name="room3Slider">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>410</y>
+     <width>241</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QSlider {
+    background-color: #e0e0e0;   /* 슬라이더 전체 배경색 */
+    border: transparent;   /* 슬라이더 테두리 */
+    border-radius: 10px;         /* 슬라이더 테두리의 둥근 정도 */
+    padding: 5px;                /* 슬라이더 내부 패딩 */
+}
+QSlider::groove:horizontal {
+    border: 1px solid rgb(255, 255, 255); /* 트랙 경계선 */
+    height: 15px;               /* 트랙의 높이 설정 */
+    background: rgb(255, 223, 202);
+    margin: 2px 0;
+}
+QSlider::handle:horizontal {
+    background: #5c5c5c;        /* 핸들의 색상 */
+    border: 1px solid #5c5c5c;
+    width: 120px;                /* 핸들의 넓이 설정 */
+	height:10 px;
+    margin: -5px 0;             /* 핸들의 마진 */
+    border-radius: 5px;         /* 핸들의 모서리 둥글게 */
+}
+
+/* 슬라이더 핸들을 클릭하고 움직일 때의 스타일 */
+QSlider::handle:horizontal:pressed {
+    background: rgb(222, 222, 222);        /* 슬라이더를 움직일 때 핸들의 색상 변화 */
+}</string>
+   </property>
+   <property name="pageStep">
+    <number>1</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_4">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>100</y>
+     <width>131</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: transparent;
+border-color: transparent;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/window.png&quot; width=&quot;100&quot; height=&quot;100&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titleLabel_2">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>270</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Quicksand Medium</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 85, 255);
+font: 500 12pt &quot;Quicksand Medium&quot;;
+background-color:transparent;
+border-color:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Living room</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titleLabel_3">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>340</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Quicksand Medium</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 85, 255);
+font: 500 12pt &quot;Quicksand Medium&quot;;
+background-color:transparent;
+border-color:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Bed room </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="titleLabel_4">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>410</y>
+     <width>101</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Quicksand Medium</family>
+     <pointsize>12</pointsize>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: rgb(85, 85, 255);
+font: 500 12pt &quot;Quicksand Medium&quot;;
+background-color:transparent;
+border-color:transparent;</string>
+   </property>
+   <property name="text">
+    <string>Bath room </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="windowOpenButton">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>110</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Quicksand Medium</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border:0px solid rgb(135, 135, 135);
+	color: rgb(0, 0, 0);
+	background-color: rgb(193, 193, 193);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	border-radius: 5px;
+    background-color: rgb(255, 251, 144);
+    color: rgb(195, 193, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>ALL OPEN</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="windowCloseButton">
+   <property name="geometry">
+    <rect>
+     <x>210</x>
+     <y>160</y>
+     <width>101</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Quicksand Medium</family>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+	border:0px solid rgb(135, 135, 135);
+	color: rgb(0, 0, 0);
+	background-color: rgb(193, 193, 193);
+	border-radius: 5px;
+}
+
+QPushButton:hover {
+	border-radius: 5px;
+    background-color: rgb(255, 251, 144);
+    color: rgb(195, 193, 255);
+}</string>
+   </property>
+   <property name="text">
+    <string>ALL CLOSE</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>220</y>
+     <width>41</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:transparent;
+border:none;</string>
+   </property>
+   <property name="text">
+    <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/arrow.png&quot; width=&quot;25&quot; height=&quot;25&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLabel" name="guideLabel">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>230</y>
+     <width>231</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>URW Bookman [UKWN]</family>
+     <pointsize>9</pointsize>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color:rgb(255, 237, 253);
+border:none;
+color: rgb(255, 0, 127);
+font: 500 9pt &quot;Quicksand Medium&quot;;
+font: 600 italic 9pt &quot;URW Bookman [UKWN]&quot;;</string>
+   </property>
+   <property name="text">
+    <string>Move slider to open window       </string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <zorder>guideLabel</zorder>
+  <zorder>chatgroupBox</zorder>
+  <zorder>titleLabel</zorder>
+  <zorder>room1Slider</zorder>
+  <zorder>room2Slider</zorder>
+  <zorder>room3Slider</zorder>
+  <zorder>label_4</zorder>
+  <zorder>titleLabel_2</zorder>
+  <zorder>titleLabel_3</zorder>
+  <zorder>titleLabel_4</zorder>
+  <zorder>windowOpenButton</zorder>
+  <zorder>windowCloseButton</zorder>
+  <zorder>exit</zorder>
+  <zorder>exitButton</zorder>
+  <zorder>label</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
